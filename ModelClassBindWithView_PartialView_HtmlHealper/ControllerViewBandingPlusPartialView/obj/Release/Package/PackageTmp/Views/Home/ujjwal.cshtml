@@ -1,0 +1,56 @@
+﻿<!-- bind controller class with view by right click on controller method > add view > teplate - Empty > model class - Emp (ControllerViewBandingPlusPartialView.Models) > Data context calss - Empty > Check - Reference script libery > Click ADD.
+OR
+Create Empty - without model and copy below line and peste it on newly created page with edid class name. -->
+@model ControllerViewBandingPlusPartialView.Models.Emp
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ujjwal</title>
+</head>
+<body>
+    <div>
+        @Html.Partial("Partial_ujjwal")
+        @*<p>@Model.First_name</p>
+            <p>@Model.Last_name</p>
+            <p>@Model.age</p>*@
+    </div>
+
+    <h1>HTML Helper</h1>
+    @Html.Label("Firstname", "Enter first name")
+    @Html.TextBox("first", "ujjwal", new { @class = "", style = "background-color:brown; " })
+
+    <br /><br />
+    Using HTML <br />
+    <textarea id="TextArea1" rows="2" cols="20"></textarea><br />
+    <input type="text" id="firstName" name="firstName" value="" />
+
+    <br />
+    <br />
+    <h2>ActionLink  / HyperLink </h2>
+    <ul>
+        <li>
+            ActionLink -   @Html.ActionLink("Click here", // <-- Link text
+                 "SampleView1" // <-- Action Method Name
+                 )
+        </li>
+        <li>
+            ActionLink - @Html.ActionLink("Click here", // <-- Link text
+                 "SampleView1", // <-- Action Method Name
+                 "Home", // <-- Controller Name
+                 null, // <-- Route value
+                 null // <-- htmlArguments
+                 )
+        </li>
+        <li>
+            Hyper link - <a href="~/home/SampleView1">Click here</a>
+        </li>
+    </ul>
+</body>
+</html>
