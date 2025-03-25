@@ -15,7 +15,7 @@ namespace ConsoleApplication1
         }
         public void display_x()
         {
-            Console.WriteLine("demo's X - " + x);
+            Console.WriteLine("Demo's X - " + x);
         }
     }
     class demo1:demo
@@ -24,7 +24,7 @@ namespace ConsoleApplication1
         
         public new void display_x()
         {
-            Console.WriteLine("demo1's X - " + x);
+            Console.WriteLine("Demo1's X - " + x);
         }
 
     }
